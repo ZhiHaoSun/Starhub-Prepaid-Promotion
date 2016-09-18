@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Starhub</title>
+    <link rel="stylesheet" href="css/jquery-mobile.css" />
+    <script src="js/jquery.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <style>
+
+        .selected {
+            background-color: blue;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div data-role="page" id="page1" data-dom-cache="true" data-next="page2">
+
+        <div data-role="header" data-position="fixed" data-fullscreen="true" data-theme="b"  data-id="hdr" data-tap-toggle="false">
+            <h1 style="font-size: 5vw">预订星和电话卡</h1>
+
+        </div><!-- /header -->
+
+        <div data-role="content" style="text-align: center;padding-top: 96pt" >
+            <div class="ui-title" style="background-color: #8dc73f">
+                <img src="img/title.png" style="width: 65%;height:95pt">
+                <img src="img/banner.png" style="width: 90%; height: 400px;" />
+            </div>
+
+            <div class="ui-body">
+                <div class="ui-grid-a" style="border-bottom: 1px solid black">
+                    <h3 style="color: #8dc73f;font-size: 5vw">选择您要预订的电话卡类型</h3>
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a phone-card" style="border: 1px black solid;border-radius: 25px;width: 35%;margin-left: 7%;margin-right: 8%">
+                            <img src="img/15.png" style="width: 160pt;height: 160pt;margin-top: 10px">
+                            <p style="font-size: 4vw">$15 happy电话卡</p>
+                        </div>
+                        <div class="ui-block-b phone-card" style="border: 1px black solid;border-radius: 25px;width: 35%;margin-left: 8%;margin-right: 7%">
+                            <img src="img/50.png" style="width: 160pt;height: 160pt;margin-top: 10px">
+                            <p style="font-size: 4vw">$50 happy电话卡</p>
+                        </div>
+                    </div>
+
+                    <a href="#dialog" data-rel="dialog" data-role="button" style="background-color: #8dc73f;color: white;font-size: 5vw">查看套餐详情</a>
+
+                </div>
+
+                <div class="ui-grid-a" style="border-bottom: 1px solid black">
+                    <form method="POST" action="">
+                        <fieldset>
+                            <label for="user-name" style="font-size: 5vw">姓名</label>
+                            <input type="text" name="name" id="user-name" value="" data-mini="true" placeholder="例如:张丽" style="height: 12vw;font-size:5vw">
+                        </fieldset>
+
+                        <fieldset>
+                            <label for="user-email" style="font-size: 5vw">邮箱</label>
+                            <input type="text" name="email" id="user-email" value="" data-mini="true" placeholder="例如:zhangli001@qq.com" style="height: 12vw;font-size: 5vw">
+                        </fieldset>
+
+                        <fieldset>
+                            <label for="user-nation" style="font-size: 5vw">国籍</label>
+                            <select name="nation" id="user-nation" style="height: 12vw;font-size: 5vw">
+                                <option value="1">中国</option>
+                                <option value="2">新加坡</option>
+                                <option value="3">马来西亚</option>
+                                <option value="4">印尼</option>
+                            </select>
+                        </fieldset>
+
+                        <div class="ui-field-contain">
+                            <label for="read-agreement" style="font-size: 5vw">我已阅读并同意服务条款</label><a href="agreement.html" style="font-size: 5vw">服务条款</a>
+                            <input type="checkbox" id="read-agreement" required />
+                        </div>
+
+                        <div class="ui-field-contain">
+                            <button type="submit" style="color: white;background-color: #8dc73f;font-size: 5vw">确认预订</button>
+                        </div>
+                    </form>
+
+                </div>
+
+                <div class="ui-grid-a">
+                    <h3 style="font-size: 5vw">关注星和微信公众号了解更多星和优惠!</h3>
+                </div>
+
+                <div class="ui-grid-a">
+                    <a href="barcode.html"><img src="img/triangle.png" style="width: 10vw;height: 7vw;"></a>
+                </div>
+
+            </div>
+        </div><!-- /content -->
+
+        <div data-role="footer" data-position="fixed" style="text-align: center">
+            <div class="ui-grid-b">
+                <div class="ui-block-a" style="background-color: #8dc73f;display: inline-block">
+                                <span style="display: inline-block"><img src="img/starhub-small.png" style="width: 100pt;height: 70pt;"></span>
+                                <span style="color: white;font-size: 3vw;display: inline-block">星和电话卡</span>
+                </div>
+                <div class="ui-block-b" style="background-color: #FFFF00;height: 75pt;">
+                    <p style="font-size: 3.5vw">在线充值,预订</p>
+                </div>
+                <div class="ui-block-c" style="background-color: #FFFF00;height: 75pt">
+                    <a href="barcode.html" data-role="button" style="background-color: #8dc73f;color: white;font-size: 3.5vw">微信关注</a>
+                </div>
+            </div>
+        </div>
+    </div><!-- /page -->
+
+    <div data-role="dialog" id="dialog"  data-close-btn="right" >
+        <div data-role="header" data-theme="a" role="banner" class="ui-header ui-bar-a">
+            <h1 style="color:#8dc73f;font-size: 3.5vw">详细套餐信息</h1>
+        </div>
+        <div data-role="content">
+            <div class="ui-grid-a" style="background-color: #8dc73f">
+                <div class="ui-block-a" style="color: white;text-align: center;font-size: 4vw">
+                    <span>15新币电话卡</span>
+                </div>
+
+                <div class="ui-block-b" style="color: white;text-align: center;font-size: 4vw">
+                    <span>50新币电话卡</span>
+                </div>
+            </div>
+
+            <div class="ui-grid-a"style="border-bottom: 1px black solid;vertical-align: middle">
+                <div class="ui-block-a" style="color: blue;text-align: center;">
+                    <span style="font-size: 4vw">含18新币金额</span>
+                </div>
+
+                <div class="ui-block-b" style="border-left: 4px #8dc73f solid;text-align: center;">
+                    <span style="color: blue;border-bottom: 2px black solid;font-size: 4vw">含50新币金额</span>
+                    <span style="color: blue;font-size: 4vw">30天5GB本地流量</span>
+                </div>
+            </div>
+
+            <div class="ui-grid-a" style="text-align: center;font-size: 4vw">
+                100GB本地流量,5天有效期
+            </div>
+
+            <div class="ui-grid-a" style="text-align: center;border-top:1px black solid;font-size: 4vw">
+                免费4G加速
+            </div>
+
+            <div class="ui-grid-a" style="text-align: center;border-top:1px black solid;font-size: 4vw">
+                免费国际直拨IDD 018至中<br/>国,马来西亚等其他17个国家
+            </div>
+        </div>
+    </div>
+    <script>
+        $(".phone-card").click(function(){
+           $(".phone-card").removeClass("selected");
+            $(this).addClass("selected");
+        });
+    </script>
+</body>
+</html>

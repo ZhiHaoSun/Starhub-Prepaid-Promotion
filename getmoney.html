@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Starhub</title>
+    <link rel="stylesheet" href="css/jquery-mobile.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+    <div data-role="page" id="page1" data-dom-cache="true" data-next="page2">
+
+        <div data-role="header" data-position="fixed" data-fullscreen="true" data-theme="b"  data-id="hdr" data-tap-toggle="false">
+            <h1 style="font-size: 5vw">预订星和电话卡</h1>
+
+        </div><!-- /header -->
+
+        <div data-role="content" style="text-align: center;padding-top: 80pt" >
+            <div class="ui-title">
+                <h2 style="text-align: center;color: #8dc73f; font-size: 5vw">欢迎使用新加坡星和电话卡!</h2>
+            </div>
+
+            <div class="ui-grid-a" style="background-color: #8dc73f;color: white;text-align: center">
+                <h3 style="font-size: 5vw">领取您的5新币额外话费</h3>
+            </div>
+
+            <div class="ui-grid-a">
+                <img src="img/triangle.png" style="width: 7vw;height: 5vw;margin-top: 10px">
+            </div>
+
+            <fieldset>
+                <label for="user-number" style="font-size: 4.2vw">请输入您的星和电话号码：</label>
+                <input type="number" placeholder="例如:88888888" name="number" id="user-number" style="height: 12vw; font-size: 5vw">
+            </fieldset>
+
+            <fieldset>
+                <a href="#dialog" data-rel="dialog" data-role="button" type="submit" style="color: white;background-color: #8dc73f; font-size: 5vw">提交并领取5新币额外话费</a>
+            </fieldset>
+
+            <fieldset style="border-bottom: 1px black solid">
+                <a class="ui-btn" href="index.html" style="font-size: 5vw">再次预订</a>
+            </fieldset>
+
+            <div class="ui-grid-a" style="font-size: 5vw">
+                <h3>关注星和微信公众号了解更多星和优惠!</h3>
+            </div>
+
+            <div class="ui-grid-a">
+                <a href="barcode.html"><img src="img/triangle.png" style="width: 10vw;height: 7vw;"></a>
+            </div>
+        </div><!-- /content -->
+
+        <div data-role="footer" data-position="fixed" style="text-align: center">
+            <div class="ui-grid-b">
+                <div class="ui-block-a" style="background-color: #8dc73f;display: inline-block">
+                    <span style="display: inline-block"><img src="img/starhub-small.png" style="width: 100pt;height: 70pt;"></span>
+                    <span style="color: white;font-size: 3vw;display: inline-block">星和电话卡</span>
+                </div>
+                <div class="ui-block-b" style="background-color: #FFFF00;height: 75pt;">
+                    <p style="font-size: 3.5vw">在线充值,预订</p>
+                </div>
+                <div class="ui-block-c" style="background-color: #FFFF00;height: 75pt">
+                    <a href="barcode.html" data-role="button" style="background-color: #8dc73f;color: white;font-size: 3.5vw">微信关注</a>
+                </div>
+            </div>
+        </div>
+    </div><!-- /page -->
+
+    <div data-role="dialog" id="dialog"  data-close-btn="right">
+        <div data-role="header" data-theme="a" role="banner" class="ui-header ui-bar-a">
+            <h1 style="color:#8dc73f; font-size: 3vw">话费领取成功!</h1>
+        </div>
+        <div data-role="content">
+            <p style="font-size: 4vw;text-align: center">拨打*123*1*1#可查询<br/>剩余储值。关注新加坡星和<br/>电话卡微信公众号,<br/>了解更多星和资讯！</p>
+        </div>
+    </div>
+</body>
+</html>
